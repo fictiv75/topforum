@@ -1,0 +1,25 @@
+.banner {
+  min-height: 440px;
+  padding-top: 123px;
+  padding-bottom: 138px;
+  background-image: url(../../img/banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__wrapper {
+  max-width: 505px;
+  margin-right: 39px;
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.banner__content {
+  
+  max-width: 427px;
+  height: 179px;
+  background-color: #fff;
+}
