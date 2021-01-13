@@ -1,0 +1,60 @@
+button {
+	@include no-btn;
+	@include btn_anim(1.05, 0.95);
+	@include bg('contain');
+	display: block;
+}
+
+.btn {
+	padding: 0 31px;
+	font-size: 13px;
+	line-height: 42px;
+	font-weight: 400;
+	color:#fff;
+	text-transform: uppercase;
+	background-color: var(--accent-color);
+}
+
+.submenu {
+	// .submenu__list
+	&__list {
+		display: none;
+		// padding-top: 10px;
+		min-width: 295px;
+		position: absolute;
+		left: 0;
+		top: 56px;
+		border: 1px solid #d6d6d6;
+		z-index: 1;
+	}
+	// .submenu__item
+	&__item {
+		position: relative;
+		padding-top: 17px;
+		padding-left: 22px;
+		padding-bottom: 15px;
+		background-color: #fff;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: #d6d6d6;
+		}
+		&:not(:first-child)::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 11px;
+			width: 271px;
+			height: 1px;
+			background-color: #d6d6d6;
+		}
+	}
+	// .submenu__link
+	&__link {
+		display: inline-block;
+		font-size: 15px;
+		font-weight: 300;
+		color: var(--text);
+		text-transform: capitalize;
+	}
+}

@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const group_media = require("gulp-group-css-media-queries");
 const bs = require('browser-sync');
 const rename = require('gulp-rename');
 const prefixer = require('gulp-autoprefixer');
@@ -87,6 +88,9 @@ gulp.task('dev_styles', () => {
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
+		.pipe(
+			group_media()
+		)
 		.pipe(prefixer({
 			overrideBrowserslist: ['last 8 versions'],
 			browsers: [
